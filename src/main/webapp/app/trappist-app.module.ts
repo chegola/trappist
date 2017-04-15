@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
+import {MaterialModule} from '@angular/material';
+
 import { TrappistSharedModule, UserRouteAccessService } from './shared';
 import { TrappistHomeModule } from './home/home.module';
 import { TrappistAdminModule } from './admin/admin.module';
@@ -35,7 +37,8 @@ import {
         TrappistHomeModule,
         TrappistAdminModule,
         TrappistAccountModule,
-        TrappistEntityModule
+        TrappistEntityModule,
+        MaterialModule.forRoot(),
     ],
     declarations: [
         JhiMainComponent,

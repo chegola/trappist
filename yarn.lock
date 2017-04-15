@@ -15,6 +15,10 @@
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/@angular-cli/base-href-webpack/-/base-href-webpack-1.0.16.tgz#4296a2ff7db84ddc2e67c2a107e276f72463ff8d"
 
+"@angular/animations@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.0.2.tgz#79f6a77d8b6e19b2d1fd9fa175f78143cd689727"
+
 "@angular/cli@1.0.0-beta.28.3":
   version "1.0.0-beta.28.3"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.0.0-beta.28.3.tgz#f09d3a67777b7986b0da8d986b73e3d1d94475fd"
@@ -115,9 +119,11 @@
   version "2.4.7"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.4.7.tgz#b024b2b49ae0234258d42309e46f65862a42070d"
 
-"@angular/material@^2.0.0-beta.3":
-  version "2.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.3.tgz#ec31dee61d7300ece28fee476852db236ded1e13"
+"@angular/material@^2.0.0-beta.11-3":
+  version "2.0.0-alpha.11-3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-alpha.11-3.tgz#71780b1bcf07777d5bcef43330ab7695bb2da549"
+  dependencies:
+    "@types/hammerjs" "^2.0.30"
 
 "@angular/platform-browser-dynamic@2.4.7":
   version "2.4.7"
@@ -153,6 +159,10 @@
     loader-utils "^1.0.2"
     magic-string "^0.19.0"
     source-map "^0.5.6"
+
+"@types/hammerjs@^2.0.30":
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.34.tgz#9cbac4f41cb039436141785e1be50b3ab10a04a9"
 
 "@types/jasmine@2.5.42":
   version "2.5.42"
