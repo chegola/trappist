@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+
 import { JhiLanguageService } from 'ng-jhipster';
 
 import { Principal } from '../auth/principal.service';
 import { AuthServerProvider } from '../auth/auth-session.service';
+
+import { LoginInfo } from './trappist-login.model';
 
 @Injectable()
 export class LoginService {
@@ -10,7 +15,8 @@ export class LoginService {
     constructor (
         private languageService: JhiLanguageService,
         private principal: Principal,
-        private authServerProvider: AuthServerProvider
+        private authServerProvider: AuthServerProvider,
+        private http: Http
     ) {}
 
     login (credentials, callback?) {
@@ -38,5 +44,16 @@ export class LoginService {
     logout () {
         this.authServerProvider.logout().subscribe();
         this.principal.authenticate(null);
+    }
+
+    getLogoUrl(): Observable<LoginInfo> {
+        // console.debug('login.service.getLogoUrl()');
+        return this.http.get('api/login-screen').map((res: Response) => {
+            // console.debug('got response: ' + res);
+            let data = res.json();
+            let loginInfo = new LoginInfo();
+            loginInfo.logoUrl = data.logoUrl;
+            return loginInfo;
+          });
     }
 }

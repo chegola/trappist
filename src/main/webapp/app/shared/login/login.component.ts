@@ -17,6 +17,7 @@ export class JhiLoginModalComponent implements OnInit, AfterViewInit {
     rememberMe: boolean;
     username: string;
     credentials: any;
+    logoUrl: string;
 
     constructor(
         private eventManager: EventManager,
@@ -34,6 +35,10 @@ export class JhiLoginModalComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.languageService.addLocation('login');
+        this.loginService.getLogoUrl().subscribe(loginInfo => {
+            this.logoUrl = loginInfo.logoUrl;
+            // console.debug('login.component.logoUrl=' + this.logoUrl);
+        });
     }
 
     ngAfterViewInit() {

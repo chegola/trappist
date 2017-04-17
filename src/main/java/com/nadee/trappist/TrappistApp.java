@@ -7,6 +7,7 @@ import io.github.jhipster.config.JHipsterConstants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -29,6 +30,14 @@ public class TrappistApp {
     private static final Logger log = LoggerFactory.getLogger(TrappistApp.class);
 
     private final Environment env;
+
+    private ApplicationProperties applicationProperties;
+
+    @Autowired
+    public void setApplicationProperties(ApplicationProperties applicationProperties) {
+        this.applicationProperties = applicationProperties;
+        log.info("application login properties: " + this.applicationProperties.getLoginScreen().toString());
+    }
 
     public TrappistApp(Environment env) {
         this.env = env;

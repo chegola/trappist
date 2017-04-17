@@ -123,3 +123,5 @@ jhipster:
 # ===================================================================
 
 application:
+    login-screen:
+        logo-url: "http://pngimg.com/uploads/porsche_logo/porsche_logo_PNG9.png"
