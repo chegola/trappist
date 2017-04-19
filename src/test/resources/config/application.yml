@@ -90,3 +90,5 @@ jhipster:
 # ===================================================================
 
 application:
+   login-screen:
+        logo-url: "http://testpass.com/pass.png"

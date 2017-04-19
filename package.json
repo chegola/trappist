@@ -7,7 +7,6 @@
     "node_modules"
   ],
   "dependencies": {
-    "@angular/animations": "^4.0.2",
     "@angular/common": "2.4.7",
     "@angular/compiler": "2.4.7",
     "@angular/core": "2.4.7",
