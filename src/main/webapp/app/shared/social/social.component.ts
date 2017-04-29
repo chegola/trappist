@@ -13,6 +13,7 @@ export class JhiSocialComponent implements OnInit {
     providerSetting: string;
     providerURL: string;
     csrf: string;
+    providerIcon: string;
 
     constructor (
         private languageService: JhiLanguageService,
@@ -26,5 +27,13 @@ export class JhiSocialComponent implements OnInit {
         this.providerSetting = this.socialService.getProviderSetting(this.provider);
         this.providerURL = this.socialService.getProviderURL(this.provider);
         this.csrf = this.csrfService.getCSRF();
+        if (this.provider === 'facebook') {
+            this.providerIcon = 'fa fa-facebook fa-3x';
+        } else if (this.provider === 'google') {
+            this.providerIcon = 'fa fa-google fa-3x';
+        } else if (this.provider === 'twitter') {
+            this.providerIcon = 'fa fa-twitter fa-3x';
+
+        }
     }
 }
