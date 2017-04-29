@@ -1,5 +1,5 @@
 os:
-  - windows
+  - linux
 services:
   - docker
 language: node_js
@@ -32,7 +32,8 @@ install:
 script:
   - chmod +x mvnw
   - ./mvnw clean test
-  - yarn test
+  # yarn test
+  # ./mvnw com.heroku.sdk:heroku-maven-plugin:1.1.1:deploy-war -DskipTests -Pprod -Dheroku.appName=
 
 notifications:
   webhooks:
