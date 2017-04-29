@@ -25,17 +25,10 @@
             </div>
         </div>
         <div class="row">
-
-            <!--        <div class="col-md-4 offset-md-4">
-                        <h1 jhiTranslate="login.title">Sign in</h1>
-                    </div>-->
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <form class="form" role="form" (ngSubmit)="login()">
                     <div class="form-group">
-                        <!--
-                                            <label for="username" jhiTranslate="global.form.username">Login</label>
-                        -->
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" name="username" id="username" placeholder="{{'global.fxorm.1username.placeholder' | translate}}"
@@ -43,9 +36,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <!--
-                                            <label for="password" jhiTranslate="login.form.password">Password</label>
-                        -->
                         <div class="input-group">
                             <span class="input-group-addon" id="add-password"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
                             <input type="password" class="form-control" name="password" id="password" placeholder="{{'login.form.password.placeholder' | translate}}"
@@ -58,40 +48,32 @@
                             <span jhiTranslate="login.form.rememberme">Remember me</span>
                         </label>
                     </div>
-                    <br>
-                    <div align="center">
-                        <a class="navbar-brand logo">
-                            <span class="logo-img"></span>
-                        </a>
-                        <!--<i class="fa fa-facebook-official fa-fw fa-lg" aria-hidden="true"></i>-->
-                    </div>
+                    <table border="0" width="100%" >
+                        <tr align="center">
+                            <td>
+                                <jhi-social provider="facebook"></jhi-social>
+                            </td>
+                            <td>
+                                <jhi-social provider="google"></jhi-social>
+                            </td>
+                            <td>
+                                <jhi-social provider="twitter"></jhi-social>
+                            </td>
+                        </tr>
+                    </table>
                     <br>
                     <button type="submit" class="btn btn-primary btn-lg btn-block" >Sign in</button>
                 </form>
                 <p></p>
-<!--
-                <button type="button" class="btn btn-default btn-lg btn-block" (click)="register()" jhiTranslate="global.messages.info.register.link">Register a new account</button>
--->
 
                 <div align="center">
                     <i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i><a class="alert-link" (click)="register()" jhiTranslate="global.messages.info.register.link">Register a new account</a>
                     <br>
                     <i class="fa fa-unlock fa-fw" aria-hidden="true"></i><a class="alert-link" (click)="requestResetPassword()" jhiTranslate="login.password.forgot">Forget your password?</a>
                 </div>
-<!--
-                    <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>
-                    <a class="alert-link" (click)="register()" jhiTranslate="global.messages.info.register.link">Register a new account</a>
--->
             </div>
             <div class="col-sm-1"></div>
 
-            <!--<div class="col-md-6">
-                <br/>
-                <jhi-social provider="google"></jhi-social>
-                <jhi-social provider="facebook"></jhi-social>
-                <jhi-social provider="twitter"></jhi-social>
-                &lt;!&ndash; jhipster-needle-add-social-button &ndash;&gt;
-            </div>-->
         </div>
     </div>
 
